@@ -34,9 +34,8 @@ def listar_disciplinas():
     disciplinas = cursor.fetchall()
 
     disciplinas_objetos = [
-        objetos.Disciplina(codigo, nome, aulas_planejadas)
-        #eu não entendi a parte de carga horária, então só to colocando a de aulas_planejadas
-        for codigo, nome, aulas_planejadas in disciplinas
+        objetos.Disciplina(codigo, nome, aulas_planejadas, aulas_ministradas)
+        for codigo, nome, aulas_planejadas, aulas_ministradas in disciplinas
     ]
 
     return disciplinas_objetos
@@ -49,8 +48,7 @@ def pegar_disciplina_por_id(id):
     disciplina = cursor.fetchone()
 
     if disciplina:
-        return objetos.Disciplina(disciplina[0], disciplina[1], disciplina[2])
-        #eu não entendi a parte de carga horária, então só to colocando a de aulas_planejadas
+        return objetos.Disciplina(disciplina[0], disciplina[1], disciplina[2], disciplina[3])
     else:
         return None
 

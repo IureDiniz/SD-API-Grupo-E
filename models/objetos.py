@@ -13,10 +13,11 @@ class Estudante:
     
 
 class Disciplina:
-    def __init__(self, codigo, nome, carga_horaria):
+    def __init__(self, codigo, nome, aulas_planejadas, aulas_ministradas):
         self.codigo = codigo
         self.nome = nome
-        self.carga_horaria = carga_horaria
+        self.aulas_planejadas = aulas_planejadas 
+        self.aulas_ministradas = aulas_ministradas
 
 class Matricula:
     def __init__(self, id, estudante_id, disciplina_codigo, semestre, situacao):

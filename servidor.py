@@ -20,7 +20,7 @@ def disciplinas():
     return met.listar_disciplinas()
 
 @app.get("/disciplinas/{id}")
-def disciplina_id(id: int):
+def disciplina_id(id):
     return met.pegar_disciplina_por_id(id)
 
 @app.get("/matriculas")
