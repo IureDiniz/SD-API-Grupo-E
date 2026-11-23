@@ -3,9 +3,8 @@
 - usuário: adm
 - senha: 1234
 
-## Comandos para executar o código em python
+## Comando para acessar a virtualização python
 - source venv/bin/activate
-- pyhton3 conexao.py
 
 ## Comando para ligar o servidor
 - uvicorn servidor:app --reload
